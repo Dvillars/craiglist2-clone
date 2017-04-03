@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { Router } from '@angular/router';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
-  styleUrls: ['./forum.component.css']
+  styleUrls: ['./forum.component.css'],
+  providers: [PostService]
 })
-export class ForumComponent {
+export class ForumComponent implements OnInit {
   //ensures that every instance of ForumComponent has a Router object available when instantiated
-  constructor(private router: Router){}
+  constructor(private router: Router, private postService: PostService){}
+  posts: Post[];
 
-  posts: Post[] = [
-    new Post("couch for sale", "rachel", "my couch is in good condition", "for sale", 1),
-    new Post("car for sale", "michael", "my car is in bad condition", "for sale", 2),
-    new Post("free books", "juan", "nancy drew book series", "for sale", 3)
-  ];
+  ngOnInit(){
+    this.posts = this.postService.getPosts();
+  }
 
   goToDetailPage(clickedPost: Post) {
     this.router.navigate(['post', clickedPost.id]);
