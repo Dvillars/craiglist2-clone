@@ -1,6 +1,6 @@
 <div>
-  <h3>{{postToDisplay.title}}</h3>
-  <h4>{{postToDisplay.author}}</h4>
-  <p>{{postToDisplay.content}}</p>
-  <p>{{postToDisplay.category}}</p>
+  <h3>{{(postToDisplay| async)?.title}}</h3>
+  <h4>{{(postToDisplay| async)?.author}}</h4>
+  <p>{{(postToDisplay| async)?.content}}</p>
+  <p>{{(postToDisplay| async)?.category}}</p>
 </div>

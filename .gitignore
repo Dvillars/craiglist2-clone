@@ -16,6 +16,9 @@
 *.launch
 .settings/
 
+#Firebase credentials
+/src/app/api-keys.ts 
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

@@ -1,0 +1,17 @@
+{"posts": [{
+  "title": "couch for sale",
+  "author": "rachel",
+  "content": "my couch is in good condition",
+  "category": "for sale"
+  }, {
+    "title": "car for sale",
+    "author": "michael",
+    "content": "my car is in bad condition",
+    "category": "for sale"
+  }, {
+    "title": "free books",
+    "author": "juan",
+    "content": "nancy drew book series",
+    "category": "for sale"
+  }]
+}
